@@ -82,6 +82,14 @@ def remove_key_from_dict(x, keys_to_remove):
         x_clean = x
     return x_clean
 
+# from openai.error import RateLimitError
+# import backoff
+#
+# @backoff.on_exception(backoff.expo, RateLimitError)
+# def completions_with_backoff(**kwargs):
+# response = openai.Completion.create(**kwargs)
+# return response
+
 
 class GraphRAGChain:
     def __init__(self, vector_index_name: str, prompt_instructions: str, graph_retrieval_query: str = None, k: int = 5):
